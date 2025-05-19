@@ -1,0 +1,97 @@
+﻿@page "/"
+@using BlazorRecipeBook.Data
+@using BlazorRecipeBook.Services
+@inject RecipeState RecipeState
+@rendermode InteractiveServer
+
+
+<PageTitle>Home</PageTitle>
+
+<h1 class="recipe-heading">Your Recipes</h1>
+
+<div class="recipe-grid">
+    @foreach (var recipe in RecipeState.recipes)
+    {
+        <div class="card mb-3 shadow recipe-card">
+            <div class="card-body">
+                <h5 class="card-title recipe-title">@recipe?.title</h5>
+
+                @if (!string.IsNullOrWhiteSpace(recipe?.image))
+                {
+                    <img src="@recipe.image" class="img-fluid mb-3" style="border-radius: 8px;" alt="@recipe.title" />
+                }
+
+                <NavLink href="@($"/details/{recipe?.id}")" class="nav-link recipe-link">
+                    Details page
+                </NavLink>
+
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-outline-danger remove-btn" @onclick="() => HandleRemoveRecipe(recipe)">
+                        Remove recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        var recipeOne = new Recipe
+        {
+            title = "Chicken with Rice",
+            image = "https://spoonacular.com/recipeImages/1-556x370.jpg",
+            readyInMinutes = 30,
+            servings = 2,
+            summary = "A simple, protein-rich dish with sautéed chicken and fluffy basmati rice.",
+            instructions = "1. Cut chicken breast into strips and season.\n2. Sauté in a pan.\n3. Cook the rice and mix it with the chicken.",
+            extendedIngredients = new List<Ingredient>
+            {
+                new Ingredient { name = "Chicken breast", amount = 300, unit = "g" },
+                new Ingredient { name = "Basmati rice", amount = 150, unit = "g" },
+                new Ingredient { name = "Olive oil", amount = 1, unit = "tbsp" },
+                new Ingredient { name = "Salt", amount = 1, unit = "tsp" },
+                new Ingredient { name = "Paprika", amount = 1, unit = "tsp" }
+            }
+        };
+
+
+        var recipeTwo = new Recipe
+        {
+            title = "Salmon with Lemon and Herbs",
+            image = "https://spoonacular.com/recipeImages/2-556x370.jpg",
+            readyInMinutes = 25,
+            servings = 2,
+            summary = "Fresh salmon with a lemon-herb crust, baked in the oven.",
+            instructions = "1. Preheat oven to 180°C (350°F).\n2. Drizzle salmon fillets with lemon juice.\n3. Rub with herbs and oil, then bake for 15 minutes.",
+            extendedIngredients = new List<Ingredient>
+            {
+                new Ingredient { name = "Salmon fillet", amount = 2, unit = "pieces" },
+                new Ingredient { name = "Lemon", amount = 1, unit = "piece" },
+                new Ingredient { name = "Olive oil", amount = 1, unit = "tbsp" },
+                new Ingredient { name = "Parsley", amount = 1, unit = "tbsp" },
+                new Ingredient { name = "Dill", amount = 1, unit = "tsp" }
+            }
+        };
+
+
+        if (RecipeState.recipes is null)
+        {
+            RecipeState.recipes = new List<Recipe?>();
+            RecipeState.AddRecipe(recipeOne);
+            RecipeState.AddRecipe(recipeTwo);
+        }
+    }
+
+    private void HandleRemoveRecipe(Recipe? recipe)
+    {
+        if (recipe != null)
+        {
+            RecipeState.RemoveRecipe(recipe);
+        }
+    }
+}

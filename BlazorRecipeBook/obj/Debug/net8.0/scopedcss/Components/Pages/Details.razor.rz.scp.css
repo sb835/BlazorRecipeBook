@@ -1,0 +1,30 @@
+.rating-wrapper[b-6ql54q3ync] {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rating-wrapper .rating-stars[b-6ql54q3ync] {
+    display: flex;
+}
+
+.rating-wrapper button[b-6ql54q3ync] {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0;
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-wrapper button:hover[b-6ql54q3ync] {
+    background-color: #ddd;
+}

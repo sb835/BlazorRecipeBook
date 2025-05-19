@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\pages\\loadrecipes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\pages\\loadrecipes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\pages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\pages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\pages\\createrecipe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\pages\\createrecipe.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|c:\\users\\skril\\onedrive\\dokumente\\portfolio\\c#webapplications\\blazorrecipebook\\blazorrecipebook\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6CFD3EED-1DF9-41EE-A4CC-E35422FFD907}|BlazorRecipeBook\\BlazorRecipeBook.csproj|solutionrelative:blazorrecipebook\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T06:22:28.786Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-19T15:44:50.547Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T15:45:10.432Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T15:54:49.802Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoadRecipes.razor",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\LoadRecipes.razor",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Pages\\LoadRecipes.razor",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\LoadRecipes.razor",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Pages\\LoadRecipes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T16:04:01.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Pages\\Details.razor",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\Details.razor",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Pages\\Details.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T16:03:43.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateRecipe.razor",
+              "DocumentMoniker": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\CreateRecipe.razor",
+              "RelativeDocumentMoniker": "BlazorRecipeBook\\Components\\Pages\\CreateRecipe.razor",
+              "ToolTip": "C:\\Users\\skril\\OneDrive\\Dokumente\\Portfolio\\C#WebApplications\\BlazorRecipeBook\\BlazorRecipeBook\\Components\\Pages\\CreateRecipe.razor",
+              "RelativeToolTip": "BlazorRecipeBook\\Components\\Pages\\CreateRecipe.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-19T16:03:21.533Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

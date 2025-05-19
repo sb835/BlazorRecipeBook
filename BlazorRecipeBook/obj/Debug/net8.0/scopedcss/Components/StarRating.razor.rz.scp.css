@@ -1,0 +1,15 @@
+.rating-star[b-kmyfx5fyy2] {
+    font-size: 2rem;
+    color: #ccc;
+    margin-right: 4px;
+    transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.rating-star.active[b-kmyfx5fyy2] {
+    color: #cc6600;
+}
+
+.rating-star:hover[b-kmyfx5fyy2] {
+    transform: scale(1.2);
+    cursor: pointer;
+}

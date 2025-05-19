@@ -1,0 +1,77 @@
+﻿@page "/load"
+@using BlazorRecipeBook.Data
+@using BlazorRecipeBook.Services
+@inject SpoonacularService SpoonacularService
+@inject RecipeState RecipeState
+@rendermode InteractiveServer
+
+<PageTitle>Load recipes</PageTitle>
+
+<div class="recipe-header">
+    <h3 class="recipe-heading">Get new random online recipes</h3>
+    <button class="btn btn-outline-primary reload-btn" @onclick="HandleReload">Reload</button>
+</div>
+
+
+@if (RecipeState.LoadedRandomRecipes is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-hover recipe-table">
+        <thead class="table-light">
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Time</th>
+                <th>Add</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in RecipeState.LoadedRandomRecipes)
+            {
+                <tr>
+                    <td>@recipe?.title</td>
+                    <td>
+                        <img src="@recipe?.image" alt="@recipe?.title" class="recipe-img" />
+                    </td>
+                    <td>@recipe?.readyInMinutes min</td>
+                    <td>
+                        <button class="btn btn-outline-success btn-sm add-btn" @onclick="() => HandleClick(recipe)">Add</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    private bool isLoading = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Check for double click
+        if (RecipeState.LoadedRandomRecipes == null && !isLoading)
+        {
+            isLoading = true;
+            RecipeState.LoadedRandomRecipes = await SpoonacularService.GetRandomRecipesAsync(30);
+            isLoading = false;
+        }
+    }
+
+    private void HandleClick(Recipe? recipe)
+    {
+        if (recipe != null && RecipeState.LoadedRandomRecipes is not null)
+        {    
+            RecipeState.AddRecipe(recipe);
+            RecipeState.LoadedRandomRecipes.Remove(recipe);
+        }
+    }
+
+    private async Task HandleReload()
+    {
+        RecipeState.LoadedRandomRecipes = await SpoonacularService.GetRandomRecipesAsync(30);
+    }
+}

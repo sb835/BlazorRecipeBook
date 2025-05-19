@@ -1,0 +1,100 @@
+﻿@page "/create"
+@using BlazorRecipeBook.Data
+@using BlazorRecipeBook.Services
+@inject RecipeState RecipeState
+@rendermode InteractiveServer
+
+<PageTitle>Create new recipe</PageTitle>
+
+<h1 class="create-heading">Create new recipe</h1>
+
+@if (!_isSubmitted)
+{
+	<EditForm Model="NewRecipe" OnValidSubmit="@OnSubmit">
+        <DataAnnotationsValidator />
+        <div class="form-group mb-3">
+            <label for="title">Title</label>
+            <InputText id="title" class="form-control" @bind-Value="NewRecipe.title" />
+            <ValidationMessage For="@(() => NewRecipe.title)" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="image">Image URL</label>
+            <InputText id="image" class="form-control" @bind-Value="NewRecipe.image" />
+            <ValidationMessage For="@(() => NewRecipe.image)" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="readyInMinutes">Ready In (minutes)</label>
+            <InputNumber id="readyInMinutes" class="form-control" @bind-Value="NewRecipe.readyInMinutes" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="servings">Servings</label>
+            <InputNumber id="servings" class="form-control" @bind-Value="NewRecipe.servings" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="summary">Summary</label>
+            <InputTextArea id="summary" class="form-control" @bind-Value="NewRecipe.summary" rows="3" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="instructions">Instructions</label>
+            <InputTextArea id="instructions" class="form-control" @bind-Value="NewRecipe.instructions" rows="5" />
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="e.g. 200 ml milk"
+                   @bind="NewIngredientName" @bind:event="oninput" />
+            <button class="btn btn-outline-secondary" type="button" @onclick="AddIngredient">Add</button>
+        </div>
+
+        <ul class="list-group mb-3">
+            @foreach (var ingredient in NewRecipe.extendedIngredients)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @ingredient.name
+                    <button class="btn btn-sm btn-danger" type="button" @onclick="() => RemoveIngredient(ingredient)">×</button>
+                </li>
+            }
+        </ul>
+
+        <div class="mt-3">
+            <button class="btn btn-primary" type="submit">Save Recipe</button>
+            <button class="btn btn-secondary ms-2" type="reset">Reset</button>
+        </div>
+
+
+	</EditForm>
+}
+else
+{
+    <div style="margin-bottom: 15px" class="alert alert-success">The new recipe has been added.</div>
+}
+
+@code {
+    private bool _isSubmitted = false;
+    public Recipe NewRecipe = new Recipe();
+    public string? NewIngredientName { get; set; } = string.Empty;
+
+    private void AddIngredient()
+    {
+        if (!string.IsNullOrWhiteSpace(NewIngredientName))
+        {    
+            NewRecipe.extendedIngredients.Add(new Ingredient { name = NewIngredientName });
+            NewIngredientName = "";
+        }
+    }
+
+    private void RemoveIngredient(Ingredient ingredient)
+    {
+        NewRecipe.extendedIngredients.Remove(ingredient);
+    }
+
+	private void OnSubmit()
+	{
+        RecipeState.AddRecipe(NewRecipe);
+		_isSubmitted = true;
+	}
+}

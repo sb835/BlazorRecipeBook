@@ -1,0 +1,108 @@
+﻿@page "/details/{Id:int}"
+@using BlazorRecipeBook.Data
+@using BlazorRecipeBook.Services
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+@inject RecipeState RecipeState
+@inject NavigationManager NavigationManager
+@inject RatingService RatingService
+@rendermode InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+@if (recipe == null)
+{
+    <p>Recipe not found.</p>
+}
+else
+{
+    <div class="card p-3 shadow-sm" style="max-width: 800px;">
+        <h4 class="text-orange mb-3">@recipe.title</h4>
+
+        @if (!string.IsNullOrWhiteSpace(recipe.image))
+        {
+            <img src="@recipe.image" class="img-fluid mb-3" style="border-radius: 8px;" alt="@recipe.title" />
+        }
+
+        <p><strong>Ready in:</strong> @recipe.readyInMinutes minutes</p>
+        <p><strong>Servings:</strong> @recipe.servings</p>
+
+        <h5>Ingredients</h5>
+
+        <ul>
+            @foreach (var ing in recipe.extendedIngredients)
+            {
+                <li>
+                    @if (ing.amount > 0)
+                    {
+                        @($"{ing.amount} {ing.unit} {ing.name}")
+                    }
+                    else
+                    {
+                        @($"{ing.unit} {ing.name}")
+                    }
+                </li>
+            }
+        </ul>
+
+
+        <h5>Instructions</h5>
+        <p>@((MarkupString)recipe.instructions)</p>
+
+        <h5>Your Rating</h5>
+        <div class="rating-wrapper">
+            <div class="rating-stars">
+                <StarRating Rating="@CurrentRating" />
+            </div>
+            <button type="button" class="btn btn-outline-secondary mx-1" @onclick="decreaseRating">−</button>
+            <button type="button" class="btn btn-outline-secondary" @onclick="improveRating">+</button>
+
+        </div>
+
+
+        <NavLink href="/" class="btn btn-outline-secondary mt-3">
+            Back
+        </NavLink>
+
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    public Recipe? recipe { get; set; }
+
+    private int CurrentRating { get; set; }
+
+    protected override void OnInitialized()
+    {
+        recipe = RecipeState.FindById(Id);
+        if (recipe is null)
+        {
+            return;
+        }
+        CurrentRating = RatingService.GetRating(Id) ?? 0;
+    }
+
+    private void improveRating()
+    {
+        if (CurrentRating < 5)
+        {    
+            CurrentRating += 1;
+            RatingService.UpdateRating(Id, CurrentRating);
+        }
+    }
+
+    private void decreaseRating()
+    {
+        if (CurrentRating > 0)
+        {
+            CurrentRating -= 1;
+            RatingService.UpdateRating(Id, CurrentRating);
+        }
+    }
+}
+
+
+
